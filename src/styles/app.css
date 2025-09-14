@@ -1,0 +1,269 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Electric Neon Colors */
+  --color-neon-50: #f0fff4;
+  --color-neon-100: #dcfce7;
+  --color-neon-200: #bbf7d0;
+  --color-neon-300: #86efac;
+  --color-neon-400: #4ade80;
+  --color-neon-500: #22c55e;
+  --color-neon-600: #16a34a;
+  --color-neon-700: #15803d;
+  --color-neon-800: #166534;
+  --color-neon-900: #14532d;
+  --color-neon-950: #052e16;
+
+  /* Psychedelic Pink & Magenta */
+  --color-pink-50: #fdf2f8;
+  --color-pink-100: #fce7f3;
+  --color-pink-200: #fbcfe8;
+  --color-pink-300: #f9a8d4;
+  --color-pink-400: #f472b6;
+  --color-pink-500: #ec4899;
+  --color-pink-600: #db2777;
+  --color-pink-700: #be185d;
+  --color-pink-800: #9d174d;
+  --color-pink-900: #831843;
+  --color-pink-950: #500724;
+
+  /* Electric Blue & Cyan */
+  --color-cyan-50: #ecfeff;
+  --color-cyan-100: #cffafe;
+  --color-cyan-200: #a5f3fc;
+  --color-cyan-300: #67e8f9;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #06b6d4;
+  --color-cyan-600: #0891b2;
+  --color-cyan-700: #0e7490;
+  --color-cyan-800: #155e75;
+  --color-cyan-900: #164e63;
+  --color-cyan-950: #083344;
+
+  /* Psychedelic Purple & Violet */
+  --color-violet-50: #f5f3ff;
+  --color-violet-100: #ede9fe;
+  --color-violet-200: #ddd6fe;
+  --color-violet-300: #c4b5fd;
+  --color-violet-400: #a78bfa;
+  --color-violet-500: #8b5cf6;
+  --color-violet-600: #7c3aed;
+  --color-violet-700: #6d28d9;
+  --color-violet-800: #5b21b6;
+  --color-violet-900: #4c1d95;
+  --color-violet-950: #2e1065;
+
+  /* Electric Orange & Yellow */
+  --color-orange-50: #fff7ed;
+  --color-orange-100: #ffedd5;
+  --color-orange-200: #fed7aa;
+  --color-orange-300: #fdba74;
+  --color-orange-400: #fb923c;
+  --color-orange-500: #f97316;
+  --color-orange-600: #ea580c;
+  --color-orange-700: #c2410c;
+  --color-orange-800: #9a3412;
+  --color-orange-900: #7c2d12;
+  --color-orange-950: #431407;
+
+  /* High Contrast Text */
+  --color-text-light: #ffffff;
+  --color-text-dark: #000000;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+* {
+  border-color: theme(colors.violet.300);
+}
+
+.dark * {
+  border-color: theme(colors.violet.700);
+}
+
+html,
+body {
+  color: theme(colors.text-dark);
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      theme(colors.pink.400) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      theme(colors.cyan.400) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      theme(colors.violet.400) 0%,
+      transparent 50%
+    ),
+    linear-gradient(
+      135deg,
+      theme(colors.neon.300) 0%,
+      theme(colors.pink.300) 20%,
+      theme(colors.violet.300) 40%,
+      theme(colors.cyan.300) 60%,
+      theme(colors.orange.300) 80%,
+      theme(colors.neon.400) 100%
+    );
+}
+
+.dark html,
+.dark body {
+  color: theme(colors.text-light);
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      theme(colors.pink.600) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      theme(colors.cyan.600) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      theme(colors.violet.600) 0%,
+      transparent 50%
+    ),
+    linear-gradient(
+      135deg,
+      theme(colors.neon.600) 0%,
+      theme(colors.pink.600) 20%,
+      theme(colors.violet.600) 40%,
+      theme(colors.cyan.600) 60%,
+      theme(colors.orange.600) 80%,
+      theme(colors.neon.700) 100%
+    );
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    color: theme(colors.text-light);
+    background:
+      radial-gradient(
+        circle at 20% 80%,
+        theme(colors.pink.600) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 20%,
+        theme(colors.cyan.600) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 40% 40%,
+        theme(colors.violet.600) 0%,
+        transparent 50%
+      ),
+      linear-gradient(
+        135deg,
+        theme(colors.neon.600) 0%,
+        theme(colors.pink.600) 20%,
+        theme(colors.violet.600) 40%,
+        theme(colors.cyan.600) 60%,
+        theme(colors.orange.600) 80%,
+        theme(colors.neon.700) 100%
+      );
+  }
+}
+
+.using-mouse * {
+  outline: none !important;
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 20px rgba(236, 72, 153, 0.3),
+      0 0 40px rgba(139, 92, 246, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(236, 72, 153, 0.6),
+      0 0 60px rgba(139, 92, 246, 0.4),
+      0 0 80px rgba(34, 211, 238, 0.3);
+  }
+}
+
+@keyframes rainbow-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+
+/* Apply custom animations */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-rainbow-border {
+  background: linear-gradient(
+    45deg,
+    #ec4899,
+    #8b5cf6,
+    #06b6d4,
+    #f97316,
+    #ec4899
+  );
+  background-size: 400% 400%;
+  animation: rainbow-border 3s ease infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
