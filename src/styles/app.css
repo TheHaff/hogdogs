@@ -90,17 +90,17 @@ body {
     radial-gradient(
       circle at 20% 80%,
       theme(colors.pink.400) 0%,
-      transparent 50%
+      transparent 60%
     ),
     radial-gradient(
       circle at 80% 20%,
       theme(colors.cyan.400) 0%,
-      transparent 50%
+      transparent 60%
     ),
     radial-gradient(
       circle at 40% 40%,
       theme(colors.violet.400) 0%,
-      transparent 50%
+      transparent 60%
     ),
     linear-gradient(
       135deg,
@@ -111,6 +111,9 @@ body {
       theme(colors.orange.300) 80%,
       theme(colors.neon.400) 100%
     );
+  background-size: 120% 120%;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .dark html,
@@ -120,17 +123,17 @@ body {
     radial-gradient(
       circle at 20% 80%,
       theme(colors.pink.600) 0%,
-      transparent 50%
+      transparent 60%
     ),
     radial-gradient(
       circle at 80% 20%,
       theme(colors.cyan.600) 0%,
-      transparent 50%
+      transparent 60%
     ),
     radial-gradient(
       circle at 40% 40%,
       theme(colors.violet.600) 0%,
-      transparent 50%
+      transparent 60%
     ),
     linear-gradient(
       135deg,
@@ -141,6 +144,9 @@ body {
       theme(colors.orange.600) 80%,
       theme(colors.neon.700) 100%
     );
+  background-size: 120% 120%;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -151,17 +157,17 @@ body {
       radial-gradient(
         circle at 20% 80%,
         theme(colors.pink.600) 0%,
-        transparent 50%
+        transparent 60%
       ),
       radial-gradient(
         circle at 80% 20%,
         theme(colors.cyan.600) 0%,
-        transparent 50%
+        transparent 60%
       ),
       radial-gradient(
         circle at 40% 40%,
         theme(colors.violet.600) 0%,
-        transparent 50%
+        transparent 60%
       ),
       linear-gradient(
         135deg,
@@ -172,6 +178,9 @@ body {
         theme(colors.orange.600) 80%,
         theme(colors.neon.700) 100%
       );
+    background-size: 120% 120%;
+    background-position: center;
+    background-attachment: fixed;
   }
 }
 
