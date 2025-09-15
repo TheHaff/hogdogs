@@ -1,6 +1,7 @@
 /// <reference types="vite/client" />
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
+import { Analytics } from '@vercel/analytics/react';
 import * as React from 'react';
 
 import { DefaultCatchBoundary } from '~/components/DefaultCatchBoundary';
@@ -66,6 +67,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         {children}
         <TanStackRouterDevtools position='bottom-right' />
         <Scripts />
+        <Analytics />
       </body>
     </html>
   );
